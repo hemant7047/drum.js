@@ -1,16 +1,3 @@
-// function BellBoy(age,name,permit,languages){
-//     this.age=age;
-//     this.name=name;
-//     this.permit=permit;
-//     this.languages=languages;
-// }
-// var bellBoy1=new BellBoy(17,"Timmy","yes",["English","Hindi"])
-// console.log(bellBoy1);
-// ------------METHOD & IT'S OBJECT--------------------
-//   document.querySelectorAll("button")[i].addEventListener("click", function () {
-//     alert("clicked");
-//   });
-
 // Detecting button press
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i < numberOfDrumButtons; i++) {
