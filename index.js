@@ -17,11 +17,13 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     var buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
   });
 }
 // Detecting key-press
 document.addEventListener("keypress",(event)=>{ //funtion() or ()=> is called arrow function
   makeSound(event.key);
+  buttonAnimation(event.key);
 })
 
 
@@ -66,5 +68,15 @@ function makeSound(key){
             console.log(buttonInnerHTML);
           break;
       }
+}
+
+function buttonAnimation(currentKey){
+  var activeButton=document.querySelector("."+currentKey);
+  
+  activeButton.classList.add("pressed");
+
+  setInterval(() => {
+    activeButton.classList.remove("pressed")
+  }, 100);
 }
 
