@@ -1,21 +1,20 @@
 // Detecting button press
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
-// --------simple javaScript---------------
-for (var i = 0; i < numberOfDrumButtons; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-        var buttonInnerHTML = this.innerHTML;
-        makeSound(buttonInnerHTML);
-        buttonAnimation(buttonInnerHTML);
-    });
-}
-// -------jQuery---------------
+// var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+// --------simple javaScript for Detecting buttons---------------
 // for (var i = 0; i < numberOfDrumButtons; i++) {
-//     $(".drum")[i].on("click", () => {
+//     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
 //         var buttonInnerHTML = this.innerHTML;
 //         makeSound(buttonInnerHTML);
 //         buttonAnimation(buttonInnerHTML);
 //     });
 // }
+// -------jQuery for detecting buttons---------------
+
+$(".drum").click((e) => {
+    var buttonInnerHTML = e.target.innerHTML;
+    makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+});
 
 // Detecting key-press 
 
